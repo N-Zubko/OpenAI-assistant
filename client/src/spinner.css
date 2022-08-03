@@ -1,0 +1,69 @@
+ /* @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
+  /* .loading-spinner {
+    width: 74px;
+    height: 74px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    background-image: url("../src/pictures/robot_spinner.png");
+    animation: spinner 2s linear infinite;
+    margin: auto;
+    z-index: -999;
+}  */
+
+ /* .spinner-container { 
+        background: #00000050;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: darken;
+       }  */
+
+
+       .loading-spinner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 74px;
+        height: 74px;
+        background-image: url("../src/pictures/robot_spinner.png");
+        border: 5px solid #f3f3f3;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        left:50%;
+        top:50%;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      .overlay{
+          position: absolute;
+          top:0px;
+          left:0px;
+          width: 100%;
+          height: 100%;
+          background: black;
+          opacity: .5;
+          z-index: 100
+      }
+
+      .answer-box {
+          z-index: -100
+      }
+      
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
