@@ -6,7 +6,7 @@ function Home() {
       <section className="mx">
         <h1 className="title d-flex justify-content-center">Ask OpenAI app</h1>
         <h3 className="d-flex justify-content-center">
-          your artificial intelligence JavaScript programming assistant.
+          your artificial intelligence-powered JavaScript programming assistant
         </h3>
         <p className="mt-3 ">
           Ask your coding question in the{" "}

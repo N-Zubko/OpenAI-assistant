@@ -1,32 +1,3 @@
- /* @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } */
-  /* .loading-spinner {
-    width: 74px;
-    height: 74px;
-    border: 5px solid #f3f3f3;
-    border-radius: 50%;
-    background-image: url("../src/pictures/robot_spinner.png");
-    animation: spinner 2s linear infinite;
-    margin: auto;
-    z-index: -999;
-}  */
-
- /* .spinner-container { 
-        background: #00000050;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-blend-mode: darken;
-       }  */
-
-
        .loading-spinner {
         position: fixed;
         top: 0;
