@@ -4,13 +4,13 @@
 
 
 This full-stack interactive and responsive web application is designed to provide answers related to JavaScript to questions sumbitted by users. The answers are short and concise, when required they contain a code template.
-Technology used: 💡 React.js, 💡 Node.js and 💡 ExpressJS for the backend. 💡 OpenAI API to obtain answers to your questions. 💡 SQLite as a database. 💡 React Bootstrap and vanilla CSS for styling.
+Technology used: 💡 React.js for the front end, 💡 Node.js and 💡 ExpressJS for the back end. 💡 OpenAI API to obtain answers to your questions. 💡 SQLite as a database. 💡 React Bootstrap and vanilla CSS for styling.
 
 ## To run the app:
 
 1. clone the repository, install dependencies in the client and server directories. My plan is to improve this part later, as well as launch the application on a hosting platform.
 
-2. In the command line while in the server directory enter the following `npm run build-client && node server.js`. This is launch the application and open it in your browser at the port `localhost:3002`
+2. In the command line enter the following `cd server/ && npm start`. This is launch the application and open it in your browser at Port `3002`
 
 ## For security:
 
@@ -35,8 +35,8 @@ Inspired by the 80-ies aesthetics, hence glowing colours and lots of square patt
 
 2. If you want to ask a new question, go to `/question` or select `Question` tab in the navigation bar, type it in the input box and click on the `Get Your Answer` button. The answer will appear in a new box below and will be added to the page with all responses.
 
-<img width="708" alt="Question Page where user can ask OPEN AI anything about JavaScript" src="https://user-images.githubusercontent.com/63440229/182686271-f5abcc0b-694f-442a-86e5-925eacd31a0d.png">
+<img width="708" alt="Question Page where user can ask OPEN AI assistant anything about JavaScript" src="https://user-images.githubusercontent.com/63440229/182686271-f5abcc0b-694f-442a-86e5-925eacd31a0d.png">
 
 ## Demo:
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/63440229/182688935-228b3ab9-be7d-41cd-a85a-95f0e19d2312.gif)
+![video demo of Open AI assistant app](https://user-images.githubusercontent.com/63440229/182688935-228b3ab9-be7d-41cd-a85a-95f0e19d2312.gif)
