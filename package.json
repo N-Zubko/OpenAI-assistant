@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build-client": "cd client && npm run build",
+    "start": "npm run build-client && cd server && node server.js"
+  }
+}
