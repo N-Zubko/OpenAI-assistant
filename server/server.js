@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3002 || process.env.PORT;
+const port = process.env.PORT || 3002;
 const responseRouter = require("./routes/responses");
 const path = require("path");
 const basicAuth = require("express-basic-auth");
