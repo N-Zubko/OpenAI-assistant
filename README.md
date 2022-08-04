@@ -10,7 +10,7 @@ Technology used: 💡 React.js for the front end, 💡 Node.js and 💡 ExpressJ
 
 1. clone the repository, install dependencies in the client and server directories. My plan is to improve this part later, as well as launch the application on a hosting platform.
 
-2. In the command line enter the following `cd server/ && npm start`. This is launch the application and open it in your browser at Port `3002`
+2. In the command line while in the root enter the following `npm start`. This is launch the application and open it in your browser at port `3002`
 
 ## For security:
 
