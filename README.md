@@ -3,8 +3,13 @@
 <img width="656" alt="Home Page of ASK OPEN AI app" src="https://user-images.githubusercontent.com/63440229/182685468-e2b8fba9-9371-4e79-ad58-ed0e5df123af.png">
 
 
-This full-stack interactive and responsive web application is designed to provide answers related to JavaScript to questions sumbitted by users. The answers are short and concise, when required they contain a code template.
-Technology used: 💡 React.js for the front end, 💡 Node.js and 💡 ExpressJS for the back end. 💡 OpenAI API to obtain answers to your questions. 💡 SQLite as a database. 💡 React Bootstrap and vanilla CSS for styling.
+This full-stack interactive and responsive web application is designed to help users find answers related to JavaScript. The answers are short and concise, when required they contain a code template. The user types the question in the input box and hits the button, the question is sent to OpenAI using its API and the answer received by the app will appear in the box below. All question-answer pairs are stored in the database and are displayed in the `/responses` page.
+
+Technology used: 💡 React.js for the front end, 💡 Node.js and 💡 ExpressJS for the back end, 💡 SQLite as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI
+
+## Architecture:
+
+![Structure of the application and relations](https://user-images.githubusercontent.com/63440229/185286128-32209a85-c8d6-4e88-82f1-c1e88c618b92.png)
 
 ## To run the app:
 
@@ -37,6 +42,6 @@ Inspired by the 80-ies aesthetics, hence glowing colours and lots of square patt
 
 <img width="708" alt="Question Page where user can ask OPEN AI assistant anything about JavaScript" src="https://user-images.githubusercontent.com/63440229/182686271-f5abcc0b-694f-442a-86e5-925eacd31a0d.png">
 
-## Demo:
+## Demo GIF:
 
-![video demo of Open AI assistant app](https://user-images.githubusercontent.com/63440229/182688935-228b3ab9-be7d-41cd-a85a-95f0e19d2312.gif)
+![gif demo of Open AI assistant application](https://user-images.githubusercontent.com/63440229/182688935-228b3ab9-be7d-41cd-a85a-95f0e19d2312.gif)
