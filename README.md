@@ -5,7 +5,7 @@
 
 This full-stack interactive and responsive web application is designed to help users find answers related to JavaScript. The answers are short and concise, when required they contain a code template. The user types the question in the input box and hits the button, the question is sent to OpenAI using its API and the answer received by the app will appear in the box below. All question-answer pairs are stored in the database and are displayed in the `/responses` page.
 
-Technology used: 💡 React.js for the front end, 💡 Node.js and 💡 ExpressJS for the back end, 💡 SQLite as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI
+Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS for the backend, 💡 SQLite as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI
 
 ## Architecture:
 
