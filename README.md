@@ -45,3 +45,13 @@ Inspired by the 80-ies aesthetics, hence glowing colours and lots of square patt
 ## Demo GIF:
 
 ![gif demo of Open AI assistant application](https://user-images.githubusercontent.com/63440229/182688935-228b3ab9-be7d-41cd-a85a-95f0e19d2312.gif)
+
+## Plans:
+
+1. I would like to improve accessibility of the application
+
+2. Adding automated tests with the React Testing Library is also in my plans
+
+3. Deploy the app on a hosting platform as mentioned earlier
+
+4. Add animation and sounds with an option to turn them off
