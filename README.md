@@ -11,11 +11,11 @@ Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS
 
 ![Structure of the application and relations](https://user-images.githubusercontent.com/63440229/185286128-32209a85-c8d6-4e88-82f1-c1e88c618b92.png)
 
-## To run the app:
+## How to run the app:
 
-1. clone the repository, install dependencies in the client and server directories. My plan is to improve this part later, as well as launch the application on a hosting platform.
+1. clone the repository, install dependencies in the client and server directories. My plan is to improve this part later, as well as deploy the application on a hosting platform.
 
-2. In the command line while in the root enter the following `npm start`. This is launch the application and open it in your browser at port `3002`
+2. In the command line while in the root enter the following `npm start`. This will launch the application and open it in your browser at port `3002`
 
 ## For security:
 
