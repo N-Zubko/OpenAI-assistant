@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Container, Form, Button, Card } from "react-bootstrap";
-import axios from "axios";
-import LoadingSpinner from "./Spinner";
-import flash from "../pictures/flash.png";
-import "bootstrap/dist/css/bootstrap.css";
+import { Container, Form, Button, Card } from 'react-bootstrap';
+import axios from 'axios';
+import LoadingSpinner from './Spinner';
+import flash from '../pictures/flash.png';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function AskQuestion() {
-  const [response, setResponse] = useState("");
+  const [response, setResponse] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -17,19 +17,19 @@ function AskQuestion() {
     let formDataObj = Object.fromEntries(formData.entries()).questionContent;
 
     axios
-      .post("/responses", {
+      .post('/responses', {
         question: formDataObj,
       })
-      .then(setErrorMessage(""))
+      .then(setErrorMessage(''))
       .then(setIsLoading(true))
       .then((response) => {
-        setResponse(`${response.data.result}`);
+        setResponse(`${response.data}`);
         setIsLoading(false);
-        setErrorMessage("");
+        setErrorMessage('');
       })
       .catch((error) => {
         console.log(error);
-        setErrorMessage("Request Failed. Try Again");
+        setErrorMessage('Request Failed. Try Again');
       });
   };
 

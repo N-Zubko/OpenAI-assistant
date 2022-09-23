@@ -1,38 +1,27 @@
-const db = require("./db");
-const config = require("../config");
-const { Configuration, OpenAIApi } = require("openai");
-require("dotenv").config();
+const db = require('./db');
+const { Configuration, OpenAIApi } = require('openai');
+const config = require(`${__dirname}/../config`);
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: config.apiKey,
 });
+
 const openai = new OpenAIApi(configuration);
 
-function getMultiple(page = 1) {
-  const offset = (page - 1) * config.listPerPage;
-  const data = db.query(`SELECT * FROM AIresponses LIMIT ?,?`, [
-    offset,
-    config.listPerPage,
-  ]);
-  const meta = { page };
-
-  return {
-    data,
-    meta,
-  };
+function getMultiple() {
+  const data = db.getAllResponses();
+  return data;
 }
 
 function validateCreate(response) {
   let messages = [];
 
-  console.log(response);
-
   if (!response) {
-    messages.push("No object is provided");
+    messages.push('No object is provided');
   }
 
   if (!response.question) {
-    messages.push("Question is empty");
+    messages.push('Question is empty');
   }
 
   if (messages.length) {
@@ -46,14 +35,12 @@ function validateCreate(response) {
 function getAllResponses(response) {
   let messages = [];
 
-  console.log(response);
-
   if (!response) {
-    messages.push("No object is provided");
+    messages.push('No object is provided');
   }
 
   if (!response.question) {
-    messages.push("Question is empty");
+    messages.push('Question is empty');
   }
 
   if (messages.length) {
@@ -63,44 +50,34 @@ function getAllResponses(response) {
     throw error;
   }
 }
-
 async function create(aiResponseObj) {
   validateCreate(aiResponseObj);
-  const { question } = aiResponseObj;
-
+  const question = aiResponseObj.question;
   let response;
   try {
-    console.log("trying to send the question");
-    response = await openai.createCompletion("text-davinci-002", {
+    console.log('trying to send the question');
+    response = await openai.createCompletion('text-davinci-002', {
       prompt: `How do I ${question} JavaScript?`,
       temperature: 0.8,
-      max_tokens: 3000,
+      max_tokens: 2000,
       top_p: 1.0,
-      frequency_penalty: 0.5,
-      presence_penalty: 0.0,
-      stop: ["You:"],
+      frequency_penalty: 0,
+      presence_penalty: 0,
     });
   } catch (error) {
-    console.log("something went wrong");
-    console.error(error);
-    return { errorMessage: error };
+    console.log(error);
   }
-  console.log("Received OpenAI response ", response);
-  const firstSuggestion = response.data.choices[0].text;
 
-  const dbResult = db.run(
-    "INSERT INTO AIresponses (question, response) VALUES (@question, @response)",
-    { question, response: firstSuggestion }
-  );
+  const newAnswerFromAI = response.data.choices[0].text;
+  const dbResult = db.insertQuestionResponse(question, newAnswerFromAI);
 
-  let errorMessage = "Error in creating question-response pair";
-  if (dbResult.changes) {
-    let result = firstSuggestion;
-    return { result };
+  let errorMessage = 'Error in creating question-response pair';
+  if (dbResult) {
+    let result = newAnswerFromAI;
+    return result;
   }
   return { errorMessage };
 }
-
 module.exports = {
   getMultiple,
   create,
