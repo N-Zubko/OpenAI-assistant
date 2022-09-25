@@ -4,10 +4,9 @@ require('dotenv').config({
 
 const config = {
   apiKey: process.env.OPENAI_API_KEY,
+  pg_db: process.env.PG_DB,
+  pg_db_password: process.env.PG_DB_PASSWORD,
+  db_user: process.env.PG_DB_USER,
 };
 
 module.exports = config;
-
-// const config = {
-//   listPerPage: env.LIST_PER_PAGE || 1000,
-// };
