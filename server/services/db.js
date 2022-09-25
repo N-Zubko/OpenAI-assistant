@@ -1,20 +1,22 @@
 const { Pool } = require('pg');
+const config = require(`${__dirname}/../config`);
 
 const pool = new Pool({
-  user: 'N-Zubko',
+  user: config.db_user,
   host: 'db.bit.io',
-  database: 'N-Zubko/AIresponses',
-  password: 'v2_3uFZk_WZKFUW4NaejXcw7K9FUYKUX',
+  database: config.pg_db,
+  password: config.pg_db_password,
   port: 5432,
   ssl: true,
 });
 
 async function queryAll() {
   const client = await pool.connect();
+  let response;
   try {
     await client.query('BEGIN');
     const queryText = `SELECT * FROM airesponses`;
-    const res = await client.query(queryText);
+    response = await client.query(queryText);
     await client.query('COMMIT');
   } catch (e) {
     await client.query('ROLLBACK');
@@ -22,36 +24,8 @@ async function queryAll() {
   } finally {
     client.release();
   }
-}
-
-// function insertQuestionResponse(question, aiResponse) {
-function insertQuestionResponse_1(question, aiResponse) {
-  pool.connect((err, client, done) => {
-    const shouldAbort = (err) => {
-      if (err) {
-        console.error('Error in transaction', err.stack);
-        client.query('ROLLBACK', (err) => {
-          if (err) {
-            console.error('Error rolling back client', err.stack);
-          }
-          // release the client back to the pool
-          done();
-        });
-      }
-      return !!err;
-    };
-
-    client.query('BEGIN', (err) => {
-      if (shouldAbort(err)) return;
-      const queryText = `INSERT INTO airesponses(question, response) VALUES ('test-question', 'test-response')`;
-      client.query(queryText, (err, res) => {
-        if (shouldAbort(err)) console.log('abort message');
-        else {
-          console.log(res.rows);
-        }
-      });
-    });
-  });
+  const queryResult = response.rows;
+  return queryResult;
 }
 
 async function insertQuestionResponse(question, aiResponse) {
