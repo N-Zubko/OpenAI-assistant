@@ -1,8 +1,14 @@
-{"engines": {
-  "node": "14.x"
-},
+{
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "build": "cd client/ && npm install & npm run build",
-    "start": "cd server && npm start"
+    "server": "nodemon --quiet server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
   }
 }
