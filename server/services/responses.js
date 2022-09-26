@@ -5,11 +5,10 @@ const config = require(`${__dirname}/../config`);
 const configuration = new Configuration({
   apiKey: config.apiKey,
 });
-
 const openai = new OpenAIApi(configuration);
 
-function getMultiple() {
-  const data = db.getAllResponses();
+async function getMultiple() {
+  const data = await db.queryAll();
   return data;
 }
 
@@ -50,6 +49,7 @@ function getAllResponses(response) {
     throw error;
   }
 }
+
 async function create(aiResponseObj) {
   validateCreate(aiResponseObj);
   const question = aiResponseObj.question;
@@ -70,7 +70,6 @@ async function create(aiResponseObj) {
 
   const newAnswerFromAI = response.data.choices[0].text;
   const dbResult = db.insertQuestionResponse(question, newAnswerFromAI);
-
   let errorMessage = 'Error in creating question-response pair';
   if (dbResult) {
     let result = newAnswerFromAI;
