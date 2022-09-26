@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "bootstrap/dist/css/bootstrap.css";
-import CardItem from "./CardItem";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
+import CardItem from './CardItem';
+import LoadingSpinner from './Spinner';
 
 function Results() {
   const [responses, setResponses] = useState([]);
 
   const getData = async () => {
-    const { data } = await axios.get("/responses");
-    setResponses(data.data);
+    const { data } = await axios.get('/responses');
+    setResponses(data);
   };
 
   useEffect(() => {
@@ -20,7 +21,10 @@ function Results() {
       {responses.length > 0 ? (
         responses.map((item) => <CardItem item={item} />)
       ) : (
-        <p>This list is empty. Be the first to ask Open AI a question.</p>
+        <div>
+          <p>This list is empty. Be the first to ask Open AI a question.</p>
+          <LoadingSpinner />
+        </div>
       )}
     </div>
   );
