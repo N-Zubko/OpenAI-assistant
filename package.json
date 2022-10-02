@@ -3,8 +3,15 @@
     "node": "14.x"
   },
   "scripts": {
-    "dev:server": "cd server && node server.js",
-    "dev:client": "cd client && npm start",
-    "dev": "npm run dev:server && npm run dev:client"
+    "client": "cd client && npm start",
+    "server": "cd server && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
+    "dev:server": "cd client && npm build && cd .. && npm start",
+    "start": "cd server && node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
   }
 }

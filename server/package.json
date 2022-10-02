@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build-client": "cd ../client && npm start",
-    "start": "npm build-client && node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
