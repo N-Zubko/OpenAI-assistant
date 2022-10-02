@@ -3,12 +3,8 @@
     "node": "14.x"
   },
   "scripts": {
-    "server": "nodemon --quiet server",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "devDependencies": {
-    "concurrently": "^7.4.0",
-    "nodemon": "^2.0.20"
+    "dev:server": "cd server && node server.js",
+    "dev:client": "cd client && npm start",
+    "dev": "npm run dev:server && npm run dev:client"
   }
 }
