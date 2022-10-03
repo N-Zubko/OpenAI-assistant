@@ -8,7 +8,7 @@
     "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
     "dev:server": "cd client && npm build && cd .. && npm start",
     "start": "cd server && node server.js",
-    "start-heroku": "npm run heroku-postbuild && npm start",
+    "start-heroku": "npm run heroku-postbuild && echo 'starting my application serve ~~~~' && npm start",
     "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install "
   },
   "dependencies": {
