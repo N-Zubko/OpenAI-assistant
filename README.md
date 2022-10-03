@@ -7,12 +7,13 @@ Check out the [live app](https://polar-thicket-37634.herokuapp.com/)
 
 This full-stack interactive and responsive web application is designed to help users find answers related to JavaScript. The answers are short and concise, when required they contain a code template. The user types the question in the input box and hits the button, the question is sent to OpenAI using its API and the answer received by the app will appear in the box below. All question-answer pairs are stored in the database and are displayed in the `/responses` page.
 
-Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS for the backend, 💡 PostgreSQL hosted online as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI 💡 Live app is 
-ed on Heroku
+Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS for the backend, 💡 PostgreSQL on bit.io server as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI 💡 Live app is deployed on Heroku
 
 ## Architecture:
 
 ![Structure of the application and relations](https://user-images.githubusercontent.com/63440229/185286128-32209a85-c8d6-4e88-82f1-c1e88c618b92.png)
+
+* The initial plan was to have a SQLite database as part of the app, now 
 
 ## Security:
 
