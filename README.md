@@ -13,7 +13,7 @@ Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS
 
 ![Structure of the application and relations](https://user-images.githubusercontent.com/63440229/185286128-32209a85-c8d6-4e88-82f1-c1e88c618b92.png)
 
-* The initial plan was to have a SQLite database as part of the app, now 
+* The initial plan was to have a SQLite database as part of the app, now the app connects to a PostgreSQL database hosted online. 
 
 ## Security:
 
