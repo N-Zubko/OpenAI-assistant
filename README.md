@@ -1,6 +1,6 @@
 # ASK OPEN AI app
 
-Check out the [live app](https://polar-thicket-37634.herokuapp.com/)
+Check out the [live app](https://polar-thicket-37634.herokuapp.com/). The login is `test` and the password is `pass`.
 
 <img width="656" alt="Home Page of ASK OPEN AI app" src="https://user-images.githubusercontent.com/63440229/182685468-e2b8fba9-9371-4e79-ad58-ed0e5df123af.png">
 
