@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 
 const CardItem = ({ item }) => {
   return (
-    <div>
+    <div className="p-1">
       <Card>
         <Card.Header>Question #{item.id}</Card.Header>
         <Card.Body>
