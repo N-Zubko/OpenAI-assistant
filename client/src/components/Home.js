@@ -5,10 +5,10 @@ function Home() {
     <>
       <section className="mx">
         <h1 className="title d-flex justify-content-center">Ask OpenAI app</h1>
-        <h3 className="d-flex justify-content-center">
+        <h2 className="d-flex justify-content-center p-1">
           your artificial intelligence-powered JavaScript programming assistant
-        </h3>
-        <p className="mt-3 ">
+        </h2>
+        <p className="mt-3 p-1">
           Ask your coding question in the{" "}
           <a className="white-link" href="/question">
             Question
