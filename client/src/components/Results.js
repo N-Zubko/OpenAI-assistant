@@ -17,7 +17,7 @@ function Results() {
   }, []);
 
   return (
-    <div className="mt-3 pt-3 pb-3">
+    <div className="mt-3 pt-3 pb-3 mb-2">
       {responses.length > 0 ? (
         responses.map((item) => <CardItem item={item} />)
       ) : (
