@@ -7,7 +7,7 @@ function Navigation() {
   };
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <Navbar
         bg="primary"
         variant="dark"
@@ -27,7 +27,7 @@ function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </nav>
   );
 }
 
