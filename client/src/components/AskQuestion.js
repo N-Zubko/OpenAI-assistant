@@ -5,6 +5,7 @@ import axios from 'axios';
 import LoadingSpinner from './Spinner';
 import flash from '../pictures/flash.png';
 import 'bootstrap/dist/css/bootstrap.css';
+import Footer from './Footer';
 
 function AskQuestion() {
   const [response, setResponse] = useState('');
@@ -75,6 +76,7 @@ function AskQuestion() {
           </div>
         )}
       </Container>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import logo from "../pictures/robot_logo.png";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
         </p>
         <img src={logo} alt="robot_logotype" className="mt-2 logo" />
       </section>
+      <Footer />
     </>
   );
 }

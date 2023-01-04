@@ -18,7 +18,7 @@ function App() {
           <Route path="/question" element={<AskQuestion />}></Route>
           <Route path="/allResponses" element={<Results />}></Route>
         </Routes>
-        <Footer />
+        
 
       </Router>
     </div>
