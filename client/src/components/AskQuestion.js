@@ -76,7 +76,6 @@ function AskQuestion() {
           </div>
         )}
       </Container>
-      <Footer />
     </div>
   );
 }
