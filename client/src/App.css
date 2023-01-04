@@ -84,3 +84,7 @@ section {
 h3 {
   text-align: center;
 }
+
+.footer {
+  border: none;
+}
