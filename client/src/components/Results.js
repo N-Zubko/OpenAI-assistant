@@ -21,7 +21,7 @@ function Results() {
       {responses.length > 0 ? (
         responses.map((item) => <CardItem item={item} />)
       ) : (
-        <div>
+        <div className='p-1'>
           <p>This list is empty. Be the first to ask Open AI a question.</p>
           <LoadingSpinner />
         </div>
