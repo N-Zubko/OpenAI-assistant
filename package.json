@@ -9,7 +9,6 @@
     "dev:server": "cd client && npm build && cd .. && npm start",
     "start": "cd server && node server.js",
     "start-heroku": "cd client && npm install && npm run build && cd ../server && npm install",
-    "heroku-postbuild": "cd client && npm install && cd ../server && npm install "
   },
   "dependencies": {
     "concurrently": "^7.4.0",
