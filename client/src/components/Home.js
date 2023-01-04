@@ -22,7 +22,6 @@ function Home() {
         </p>
         <img src={logo} alt="robot_logotype" className="mt-2 logo" />
       </section>
-      <Footer />
     </>
   );
 }
