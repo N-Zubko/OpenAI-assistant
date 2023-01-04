@@ -13,13 +13,14 @@ function App() {
     <div className="app-container">
       <Router>
         <Navigation />
-        <Routes>
-          <Route path="/" exact element={<Home />}></Route>
-          <Route path="/question" element={<AskQuestion />}></Route>
-          <Route path="/allResponses" element={<Results />}></Route>
-        </Routes>
-        
-
+        <main className="py-4">
+          <Routes>
+            <Route path="/" exact element={<Home />}></Route>
+            <Route path="/question" element={<AskQuestion />}></Route>
+            <Route path="/allResponses" element={<Results />}></Route>
+          </Routes>
+        </main>
+        <Footer />
       </Router>
     </div>
   );
