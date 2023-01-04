@@ -1,15 +1,13 @@
 # ASK OPEN AI app
 
- 🚧 WIP: moving the project's backend to fly.io due to no longer free dynos at Heroku 🚧
-
-Check out the [live app](https://polar-thicket-37634.herokuapp.com/). The login is `test` and the password is `pass`.
+Check out the [live app](https://openai-js-assistant.up.railway.app/). The login is `test` and the password is `pass`.
 
 <img width="656" alt="Home Page of ASK OPEN AI app" src="https://user-images.githubusercontent.com/63440229/182685468-e2b8fba9-9371-4e79-ad58-ed0e5df123af.png">
 
 
 This full-stack interactive and responsive web application is designed to help users find answers related to JavaScript. The answers are short and concise, when required they contain a code template. The user types the question in the input box and hits the button, the question is sent to OpenAI using its API and the answer received by the app will appear in the box below. All question-answer pairs are stored in the database and are displayed in the `/responses` page.
 
-Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS for the backend, 💡 PostgreSQL on bit.io server as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI 💡 Live app is deployed on Heroku
+Technology used: 💡 React.js for the frontend, 💡 Node.js and 💡 ExpressJS for the backend, 💡 PostgreSQL on bit.io server as a database, 💡 React Bootstrap and vanilla CSS for styling, 💡 OpenAI API to obtain answers to your questions 💡 Uses GPT-3 Davinci model from OpenAI 💡 Live app is deployed on Railway
 
 ## Architecture:
 
@@ -26,7 +24,7 @@ The login is `test` and the password is `pass`. No additional registration is re
 
 ## To see the database contents in the json format:
 
-Go to `https://polar-thicket-37634.herokuapp.com/responses`
+Go to `https://openai-js-assistant.up.railway.app/responses`
 
 ## Design:
 
@@ -34,7 +32,7 @@ Inspired by the 80-ies aesthetics, hence glowing colours and lots of square patt
 
 ## How to use:
 
-1. If you want to read all responses stored in the database, go to `https://polar-thicket-37634.herokuapp.com/allResponses` or click `Responses` in the navigation bar. If the database is not empty, you will see numbered cards with previously asked questions and answeres.
+1. If you want to read all responses stored in the database, go to `https://openai-js-assistant.up.railway.app/allResponses` or click `Responses` in the navigation bar. If the database is not empty, you will see numbered cards with previously asked questions and answeres.
 
 <img width="699" alt="Responses Page where cards with all previously asked questions and answers given are displayed" src="https://user-images.githubusercontent.com/63440229/182687222-9e505344-6f5f-4e2a-8b6d-c129bba177f7.png">
 
