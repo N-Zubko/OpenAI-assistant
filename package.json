@@ -8,8 +8,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
     "dev:server": "cd client && npm build && cd .. && npm start",
     "start": "cd server && node server.js",
-    "start-heroku": "cd client && npm install && npm run build && npm start && cd ../server && npm install && node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install "
+    "start-heroku": "cd client && npm install && npm run build && cd ../server && npm install",
+    "heroku-postbuild": "cd client && npm install && cd ../server && npm install "
   },
   "dependencies": {
     "concurrently": "^7.4.0",

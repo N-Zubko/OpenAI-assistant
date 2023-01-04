@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build-client": "cd ../client && npm start",
-    "start": "node server.js"
+    "start-client": "cd ../client && npm start",
+    "start": "node server.js && npm run start-client"
   },
   "keywords": [],
   "author": "",
