@@ -81,7 +81,7 @@ section {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 h3 {
@@ -91,5 +91,6 @@ h3 {
 .footer {
   border: none;
   text-align: center;
-  background: rgba(255, 255, 255, 0.7);
+  background: #ffffff;
+  height: fit-content;
 }
