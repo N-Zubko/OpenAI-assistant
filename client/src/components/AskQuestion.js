@@ -41,7 +41,7 @@ function AskQuestion() {
         <div className="mt-3" id="question">
           <Form onSubmit={(e) => onFormSubmit(e)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="title">How do I ...</Form.Label>
+              <Form.Label className="title">Enter your question below:</Form.Label>
               <Form.Control
                 type="text"
                 name="questionContent"
