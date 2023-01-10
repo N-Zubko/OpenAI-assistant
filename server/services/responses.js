@@ -57,7 +57,7 @@ async function create(aiResponseObj) {
   try {
     console.log('trying to send the question');
     response = await openai.createCompletion('text-davinci-002', {
-      prompt: `How do I ${question} JavaScript?`,
+      prompt: `${question} JavaScript?`,
       temperature: 0.8,
       max_tokens: 2000,
       top_p: 1.0,
