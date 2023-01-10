@@ -7,14 +7,14 @@ const basicAuth = require('express-basic-auth');
 
 app.use(express.json());
 
-app.use(
-  basicAuth({
-    users: {
-      test: 'pass',
-    },
-    challenge: true,
-  })
-);
+// app.use(
+//   basicAuth({
+//     users: {
+//       test: 'pass',
+//     },
+//     challenge: true,
+//   })
+// );
 
 app.use(express.static(path.join(__dirname, '../client/build')));
 
