@@ -1,4 +1,4 @@
-# ASK OPEN AI app
+# ASK OPEN AI app 
 
 Check out the [live app](https://openai-js-assistant.up.railway.app/). The login is `test` and the password is `pass`.
 
